@@ -7,43 +7,57 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
-    </header>
-
-    <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
-        <div id="activities-list">
-          <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="hero">
+          <div>
+            <span class="eyebrow">Mergington High School</span>
+            <h1>Explore Extracurricular Activities</h1>
+            <p>Browse clubs, teams, and classes — then sign up with your student email.</p>
+          </div>
+          <div class="hero-badge">Student life</div>
         </div>
-      </section>
+      </header>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+      <main class="content-grid">
+        <section id="activities-container" class="panel">
+          <div class="section-header">
+            <h3>Available Activities</h3>
+            <p class="section-subtitle">See the schedule, availability, and current participants.</p>
           </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
+          <div id="activities-list">
+            <!-- Activities will be loaded here -->
+            <p>Loading activities...</p>
           </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="message" class="hidden"></div>
-      </section>
-    </main>
+        </section>
 
-    <footer>
-      <p>&copy; 2023 Mergington High School</p>
-    </footer>
+        <section id="signup-container" class="panel">
+          <div class="section-header">
+            <h3>Sign Up for an Activity</h3>
+            <p class="section-subtitle">Choose an activity and join your peers in student life.</p>
+          </div>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="email">Student Email</label>
+              <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="activity">Select Activity</label>
+              <select id="activity" required>
+                <option value="">-- Select an activity --</option>
+                <!-- Activity options will be loaded here -->
+              </select>
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div id="message" class="hidden"></div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2023 Mergington High School</p>
+      </footer>
+    </div>
 
     <script src="app.js"></script>
   </body>
